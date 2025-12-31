@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>TimeHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="time.jpg">
+</head>
+<body>
+
+  
+  <div id="home" class="page active">
+    <h1>TimeHub</h1>
+    <p>Your all-in-one productivity timer</p>
+
+    <div class="menu">
+      <button onclick="showPage('stopwatch')">⏱ Stopwatch</button>
+      <button onclick="showPage('pomodoro')">🍅 Pomodoro</button>
+      <button onclick="showPage('egg')">🥚 Egg Timer</button>
+    </div>
+  </div>
+
+  
+  <div id="stopwatch" class="page">
+    <h2>Stopwatch</h2>
+    <div id="sw-display" class="time">00:00:00</div>
+
+    <div class="controls">
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="pauseStopwatch()">Pause</button>
+      <button onclick="resetStopwatch()">Reset</button>
+    </div>
+
+    <button class="back" onclick="goHome()">← Back</button>
+  </div>
+
+  
+  <div id="pomodoro" class="page">
+    <h2>Pomodoro</h2>
+    <p>25 min focus • 5 min break</p>
+
+    <div id="pomo-display" class="time">25:00</div>
+
+    <div class="controls">
+      <button onclick="startPomodoro()">Start</button>
+      <button onclick="pausePomodoro()">Pause</button>
+      <button onclick="resetPomodoro()">Reset</button>
+    </div>
+
+    <button class="back" onclick="goHome()">← Back</button>
+  </div>
+
+  
+  <div id="egg" class="page">
+    <h2>Egg Timer</h2>
+    <p>Choose how you like your egg 🥚</p>
+
+    <div class="egg-options">
+      <button onclick="startEgg(6)">Soft-Boiled (6 min)</button>
+      <button onclick="startEgg(8)">Medium-Boiled (8 min)</button>
+      <button onclick="startEgg(12)">Hard-Boiled (12 min)</button>
+    </div>
+
+    <div id="egg-display" class="time">00:00</div>
+
+    <button class="back" onclick="goHome()">← Back</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
